@@ -146,4 +146,8 @@ with gr.Blocks(title="KA2L Hybrid Semantic Router") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=True)
+    # server_name="0.0.0.0" is required for Replit (and similar cloud IDEs) so that
+    # the Gradio dev server binds to all interfaces and is reachable via the
+    # environment's built-in port forwarding.  share=True still publishes a
+    # public Gradio tunnel URL alongside the local one.
+    demo.launch(server_name="0.0.0.0", share=True)
